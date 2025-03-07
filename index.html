@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="style-sheets" href="styles.css"> 
+    <meta charset="utf-8">
+    <title> Survey Form </title>  
+    <style>
+      body {
+    width: 100%;
+    height: 100vw;
+    margin: 0;
+    background-color:#3b3b4f ;
+    color: #FFF2F2;
+    font-family: monospace;
+    font-size: 15px;
+  }
+  
+  #title,
+  #description,
+  legend {
+    margin: 1em auto;
+    text-align: center;
+  }
+  
+  form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+  }
+  
+  fieldset {
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    padding: 2rem 0; 
+  }
+  
+  label {
+    display: block;
+    margin: 0.5rem 
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+  
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;  
+  }
+  
+  input[type="submit"] {
+    display: block;
+    color: #FFF2F2;
+    background-color: #3b3b4f;
+    border: 1px solid #FFF2F2;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    border-color: white;
+    min-width: 300px;
+  }
+  
+  a[href] {
+    color: white;
+  }
+  
+  a[href]:hover {
+    color: blue;
+  }
+  
+  input::placeholder {
+  color: #2D3351;
+  opacity: 51%;
+  }
+     
+    </style>
+  </head>
+  <body>
+    <h1 id="title"> Survey Form</h1>
+    <p id="description">Please fill out this survey form to register</p>
+
+    <form action="mailto:hwqqrr11@gmail.com" method="post" id="survey-form">
+      <fieldset>
+       <legend>Personal Information</legend>
+        <label id="name-label"for="name"> Enter your name: <input id="name" type="text" placeholder=" name" required>
+        </label>
+        <label id="number-label" for="number"> Enter your age: <input id="number" type="number" placeholder=" 18" min="18" max="120"> 
+        </label>
+        <label id="dropdown-label" for="dropdown">Select a gender:
+        <select id="dropdown">
+         <option value=""> </option> 
+         <option value="кот"> Кот </option>
+         <option value="колобок"> Колобок </option>
+         <option value="not-stated"> Prefer Not To Say</option>
+       </select>
+      </fieldset>
+      <fieldset>
+        <legend> Login Information</legend>
+        <label id="email-label"for="email"> Enter your email:
+         <input id="email" type="email" placeholder=" example@mail.com" required>
+         </label>
+         <label for="password" id="password-label"> Create a password: <input id="password" type="password" placeholder=" password123"required>
+        </label>
+
+       
+      </fieldset>  
+      <fieldset>
+       <legend>Account Type </legend>
+       <label for="public" >
+        <input type="radio" name="account-type" id="public" value="public" class="inline" checked>Public
+       </label>
+       <label for="private"> 
+        <input type="radio" name="account-type" id="private" value="private" class="inline">Private
+       </label>
+    </fieldset>
+    <fieldset>
+      <legend><a href="https://youtu.be/dQw4w9WgXcQ?si=DIPl7-2TAbG8H3E4" >Terms and Conditions</a></legend>
+       <label for="read-accepted"> I've read and accepted the Terms and Conditions <input type="checkbox" value="read-accepted" id="read-accepted" class="inline" required>
+       
+    </fieldset> 
+
+    <input type="submit" id="submit">  
+   </form>  
+
+
+  </body>   
+</html>  
